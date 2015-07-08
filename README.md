@@ -1,5 +1,4 @@
-# IBMdashDBSampleScripts
-sample scripts for dashDB usecase work
+# IBMdashDBSampleScripts- sample scripts for IBM dashDB usecase work
 
 Script Name: loadJsonIntoCloudant.py
 This Script Will create a cloudant database if doesn't exists and does a bulk load of JSON docs, or skips db creation if exists and just does bulk load of the docs
