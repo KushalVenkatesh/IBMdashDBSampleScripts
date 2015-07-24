@@ -7,7 +7,7 @@ import sys
 if (len(sys.argv) < 5):
    args = [sys.argv[x] for x in xrange(len(sys.argv))]
    print ("Arguments passed are: %s" % (args))
-   print 'Argument values for cloudant_json_db_name,username,password,and data_url are expected'
+   print ("Argument values for cloudant_json_db_name,username,password,and data_url are expected")
 
 else:
    # pass arguments for cloudant_db_name,username,password,data_url
@@ -39,7 +39,7 @@ else:
       # Load data into cloudant
       load_response = requests.post(bulk_docs_url, auth=auth, headers=headers, data=json.dumps(data))
       get_doc_count = requests.get(count_docs_loaded, auth=auth)
-      print "There are now %d #docs loaded in %s cloudant json db." % (get_doc_count.json().get("total_rows"),db_name)
+      print ("There are now %d #docs loaded in %s cloudant json db." % (get_doc_count.json().get("total_rows"),db_name))
    else:
       # Load data into cloudant
       load_response = requests.post(bulk_docs_url, auth=auth, headers=headers, data=json.dumps(data))
